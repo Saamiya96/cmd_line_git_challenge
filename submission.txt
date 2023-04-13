@@ -1,0 +1,129 @@
+Documents ls
+PreCourse Zoom
+➜  Documents mkdir cmd_line_git_challenge
+➜  Documents ls
+PreCourse              Zoom                   cmd_line_git_challenge
+➜  Documents cd cmd_line_git_challenge 
+➜  cmd_line_git_challenge ls -A
+➜  cmd_line_git_challenge touch .gitignore
+➜  cmd_line_git_challenge open .gitignore 
+➜  cmd_line_git_challenge open .gitignore
+➜  cmd_line_git_challenge ls -A
+.gitignore
+➜  cmd_line_git_challenge ls
+➜  cmd_line_git_challenge git init
+Initialized empty Git repository in /Users/saamiyayousuf/Documents/cmd_line_git_challenge/.git/
+➜  cmd_line_git_challenge git:(main) ✗ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  cmd_line_git_challenge git:(main) ✗ git add .
+➜  cmd_line_git_challenge git:(main) ✗ git commit -m "Initial commit"
+[main (root-commit) e14f569] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+➜  cmd_line_git_challenge git:(main) git status
+On branch main
+nothing to commit, working tree clean
+➜  cmd_line_git_challenge git:(main) git log
+➜  cmd_line_git_challenge git:(main) git remote add https://github.com/Saamiya96/cmd_line_git_challenge.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+➜  cmd_line_git_challenge git:(main) git remote add origin https://github.com/Saamiya96/cmd_line_git_challenge.git
+➜  cmd_line_git_challenge git:(main) git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+➜  cmd_line_git_challenge git:(main)     git push --set-upstream origin main
+
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 235 bytes | 58.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Saamiya96/cmd_line_git_challenge.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+➜  cmd_line_git_challenge git:(main) git push
+Everything up-to-date
+➜  cmd_line_git_challenge git:(main) ls
+➜  cmd_line_git_challenge git:(main) touch README.md
+➜  cmd_line_git_challenge git:(main) ✗ open README.md 
+➜  cmd_line_git_challenge git:(main) ✗ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  cmd_line_git_challenge git:(main) ✗ ls
+README.md
+➜  cmd_line_git_challenge git:(main) ✗ mkdir lib
+➜  cmd_line_git_challenge git:(main) ✗ cd lib 
+➜  lib git:(main) ✗ touch code.rb
+➜  lib git:(main) ✗ open code.rb 
+➜  lib git:(main) ✗ cd ..
+➜  cmd_line_git_challenge git:(main) ✗ ls
+README.md lib
+➜  cmd_line_git_challenge git:(main) ✗ mkdir spec
+➜  cmd_line_git_challenge git:(main) ✗ cd spec 
+➜  spec git:(main) ✗ ls
+➜  spec git:(main) ✗ touch code_spec.rb
+➜  spec git:(main) ✗ open code_spec.rb 
+➜  spec git:(main) ✗ cd ..
+➜  cmd_line_git_challenge git:(main) ✗ ls
+README.md lib       spec
+➜  cmd_line_git_challenge git:(main) ✗ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	lib/
+	spec/
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  cmd_line_git_challenge git:(main) ✗ git add README.md 
+➜  cmd_line_git_challenge git:(main) ✗ git commit -m "Adds README"
+[main 4be6da0] Adds README
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+➜  cmd_line_git_challenge git:(main) ✗ git add .
+➜  cmd_line_git_challenge git:(main) ✗ git commit -m "Adds code and test file structure"
+[main f085354] Adds code and test file structure
+ 2 files changed, 2 insertions(+)
+ create mode 100644 lib/code.rb
+ create mode 100644 spec/code_spec.rb
+➜  cmd_line_git_challenge git:(main) git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (9/9), 743 bytes | 82.00 KiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Saamiya96/cmd_line_git_challenge.git
+   e14f569..f085354  main -> main
+➜  cmd_line_git_challenge git:(main) 
